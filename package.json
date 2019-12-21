@@ -1,0 +1,21 @@
+{
+  "name": "CislaSourceV2",
+  "version": "2.0.0",
+  "description": "Segunda versão do CislaSource.",
+  "invite": "https://discord.gg/TwjH6ww",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "TriniNz#0752",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.1.0",
+    "jimp": "^0.8.5",
+    "lowdb": "^1.0.0",
+    "request": "^2.88.0"
+  }
+}

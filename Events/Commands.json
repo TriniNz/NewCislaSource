@@ -1,0 +1,148 @@
+{
+    "Commands": [
+
+        {
+        "name":"toplevels",
+        "descrição":"Enviará uma leaderboard com os que mais utilizam o servidor.",
+        "uso":"toplevels",
+        "manutenção":false,
+        "aliases":[
+            "toplevels",
+            "tl",
+            "leaderboard"
+        ]
+        },
+
+        {
+        "name":"cmdlist",
+        "descrição":"Mostrará todos os comandos do bot.",
+        "uso":"cmdlist",
+        "manutenção":false,
+        "aliases":[
+            "cmdlist",
+            "comandos",
+            "cmds",
+            "help"
+        ]
+        },
+
+        {
+        "name":"unban",
+        "descrição":"Permitirá um membro banido a voltar ao servidor.",
+        "uso":"unban ID",
+        "manutenção":false,
+        "aliases":[
+            "unban",
+            "desbanir"
+        ]
+        },
+
+        {
+        "name":"ban",
+        "descrição":"Expulsa um membro do servidor e impossibilita de voltar.",
+        "uso":"ban @membro comentario(opcional.)",
+        "manutenção":false,
+        "aliases":[
+            "ban",
+            "banir",
+            "exilar"
+        ]
+        },
+        
+        {
+        "name":"eval",
+        "descrição":"Executa codigos instantaneamente.",
+        "uso":"eval codigo",
+        "manutenção":false,
+        "aliases":[
+            "eval",
+            "testcode",
+            "ev",
+            "e"
+        ]
+        },
+
+        {
+        "name":"equipe",
+        "descrição":"Mostra todos os membros da equipe de moderação.",
+        "uso":"equipe",
+        "manutenção":false,
+        "aliases":[
+            "equipe",
+            "staff",
+            "moderação"
+        ]
+        },
+
+        {
+        "name":"youtuber",
+        "descrição": "Mostra os requisitos para ser parceiro do Cisla.",
+        "uso": "youtuber",
+        "manutenção":false,
+        "aliases":[
+            "youtuber",
+            "yt",
+            "miniyt",
+            "ytb"
+        ]
+        
+        },
+        
+        {
+        "name":"verlevel",
+        "descrição": "Mostra o level de determinado membro.",
+        "uso": "verlevel @membro(opcional)",
+        "manutenção":false,
+        "aliases":[
+            "verlevel",
+            "level",
+            "lvl",
+            "lv"
+        ]
+        },
+        
+        {
+        "name":"say",
+        "descrição":"Enviará um anuncio em determinado canal.",
+        "uso":"say #canal Anuncio",
+        "manutenção": false,
+        "aliases": [
+            "say",
+            "anunciar",
+            "anuncio"
+        ]
+        },
+
+        {
+        "name":"admissão",
+        "descrição":"Adiciona automaticamente membros na equipe de moderação",
+        "uso":"admissão @membro @role Comentario(opcional)",
+        "manutenção":false,
+        "aliases":[
+            "admissão",
+            "admitir"
+        ]
+        },
+
+        {
+        "name":"remoção",
+        "descrição":"Remove membros automaticamente da equipe de moderação.",
+        "uso":"remoção @membro @role Comentario(opcional)",
+        "aliases":[
+            "remoção",
+            "remover"
+        ]
+        },
+
+        {
+        "name":"Afastamento",
+        "descrição":"Afasta membros automaticamente da equipe de moderação.",
+        "uso":"afastamento @membro @role Comentario(opcional)",
+        "aliases":[
+            "afastamento",
+            "afastar"
+        ]
+        }
+
+    ]
+}
