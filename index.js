@@ -35,4 +35,4 @@ thisClient.on('guildMemberRemove', async member => {
 });
 
 
-thisClient.login(process.env.thisToken);
+thisClient.login(process.env.SECRET);

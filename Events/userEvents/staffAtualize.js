@@ -1,6 +1,6 @@
 exports.run = async (Discord, thisClient) => {
 
-    let messageID = "658083580567617548"
+    let messageID = "662374414347927565"
 
     let diretores = ['']
     let gerentes = ['']

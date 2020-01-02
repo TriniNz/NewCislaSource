@@ -39,7 +39,7 @@ exports.run = async (Discord, thisClient, message, args, db) => {
             .setColor('#f83989')
         ).then(msg => {message.delete(15*1000); msg.delete(15*1000)})
 
-        message.guild.channels.get('602887344692920362').send(new Discord.RichEmbed()
+        message.guild.channels.get('657721578263674910').send(new Discord.RichEmbed()
             .setAuthor('Admissão. ', thisClient.user.displayAvatarURL)
             .setDescription(`\n\n• _Membro:_ ${member}\n• _Cargo:_  ${role}.\n• _Observação:_ ${motivo}\n`)
             .setThumbnail(member.user.displayAvatarURL)

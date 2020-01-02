@@ -37,21 +37,25 @@ exports.run = async (Discord, thisClient, message, args, db, prefix) => {
         return newArray
     }
 
+    message.channel.send(new Discord.RichEmbed()
+        .setFooter('Te enviei a lista de comandos na sua DM! Garanta que ela esteja aberta.')
+    )
+
     let embed = new Discord.RichEmbed()
             .setDescription(`Olá ${message.author}, atualmente tenho ${list.Commands.length} comandos, aqui vai a lista de deles:\n\n${comandos[paginaAtual].join('\n')}`)
-            setFooter('CislaSource ©', thisClient.user.displayAvatarURL)
+            .setFooter('CislaSource ©', thisClient.user.displayAvatarURL)
             .setColor('#f83989')
             .setTimestamp(new Date())
-    message.channel.send(embed).then(async m => { 
+    message.author.send(embed).then(async m => { 
         m.delete(360*1000); message.delete(360*1000)
 
-    await m.react("⬅")
-    await m.react("➡")
+    await m.react("⬅️")
+    await m.react("➡️")
 
-        const nextp = (reaction, user) => reaction.emoji.name === '➡' && user.id === message.author.id;
+        const nextp = (reaction, user) => reaction.emoji.name === '➡️' && user.id === message.author.id;
         const collectnext = m.createReactionCollector(nextp, { time: 360*1000 });
 
-        const antp = (reaction, user) => reaction.emoji.name === '⬅' && user.id === message.author.id;
+        const antp = (reaction, user) => reaction.emoji.name === '⬅️' && user.id === message.author.id;
         const collectant = m.createReactionCollector(antp, { time: 360*1000 });
 
     collectant.on("collect", async r => {
@@ -59,7 +63,7 @@ exports.run = async (Discord, thisClient, message, args, db, prefix) => {
                 paginaAtual -= 1
                 let proxant = new Discord.RichEmbed()
                     .setDescription(`Olá ${message.author}, atualmente tenho ${list.Commands.length} comandos, aqui vai a lista de deles:\n\n${comandos[paginaAtual].join("\n")}`)
-                    setFooter('CislaSource ©', thisClient.user.displayAvatarURL)
+                    .setFooter('CislaSource ©', thisClient.user.displayAvatarURL)
                     .setColor('#f83989')
                     .setTimestamp(new Date())
                 await m.edit(proxant)
@@ -74,15 +78,14 @@ exports.run = async (Discord, thisClient, message, args, db, prefix) => {
             paginaAtual += 1
             let proxpage = new Discord.RichEmbed()
                 .setDescription(`Olá ${message.author}, atualmente tenho ${list.Commands.length} comandos, aqui vai a lista de deles:\n\n${comandos[paginaAtual].join("\n")}`)
-                .setColor("#6699FF")
+                .setColor('#f83989')
                 .setFooter("Cisla ©")
                 .setTimestamp(new Date())
             await m.edit(proxpage)
             r.remove(message.author)
-
             
         }
     })
-    })  
+    }).catch(err => {if(err) message.channel.send('Sua DM está fechada. Não foi possivel enviar esta mensagem.')})
 }
     
