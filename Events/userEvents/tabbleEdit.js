@@ -15,7 +15,7 @@ exports.run = async (Discord, thisClient) => {
 
         body = JSON.parse(body);
 
-        thisClient.channels.get(membersChannel).setName('Membros: ' + thisClient.guilds.get('602679739777417256').memberCount)
+        thisClient.channels.get(membersChannel).setName('Membros: ' + thisClient.guilds.get('657631998634098699').memberCount)
 
         if(body.online == true) {
             thisClient.channels.get(serverStats).setName('Status: Online!')
