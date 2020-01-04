@@ -4,9 +4,9 @@ exports.run = async (Discord, thisClient) => {
     
     let ServerIP = "jogar.cisla.com.br";
 
-    let membersChannel = "602692031923355670";
-    let playersChannel = "602692209275305994";
-    let serverStats = "602692371393675264";
+    let membersChannel = "657721554574114846";
+    let playersChannel = "657721557367390218";
+    let serverStats = "657721584286695426";
 
     let api = "http://mcapi.us/server/status?ip=" + ServerIP;
 
