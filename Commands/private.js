@@ -40,6 +40,8 @@ exports.run = async (Discord, thisClient, message, args) => {
                 position: 2
             });
 
+            await Ch.lockPermissions()
+
             Ch.overwritePermissions(Rl, {
                 SEND_MESSAGES: true,
                 VIEW_CHANNEL: true
