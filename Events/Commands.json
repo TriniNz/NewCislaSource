@@ -2,6 +2,16 @@
     "Commands": [
 
         {
+        "name":"private",
+        "descrição":"Criará uma sala privada para o membro permitido.",
+        "uso":"private help",
+        "manutenção":false,
+        "aliases":[
+            "private",
+            "privado"
+        ]
+        },
+        {
         "name":"toplevels",
         "descrição":"Enviará uma leaderboard com os que mais utilizam o servidor.",
         "uso":"toplevels",
