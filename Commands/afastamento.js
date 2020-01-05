@@ -33,6 +33,7 @@ exports.run = async (Discord, thisClient, message, args, db) => {
 
 
     member.removeRole(role).then(async sucess => {
+    member.removeRole('663519150475313153')
         message.reply(new Discord.RichEmbed()
             .setDescription('Sucesso! ' + member + " foi afastado da equipe. ex-" + role)
             .setFooter("Responsavel: " + message.author.tag + ' CislaSource ©', thisClient.user.displayAvatarURL)

@@ -124,13 +124,13 @@
         },
         
         {
-        "name":"say",
+        "name":"anunciar",
         "descrição":"Enviará um anuncio em determinado canal.",
-        "uso":"say #canal Anuncio",
+        "uso":"anunciar #canal Anuncio",
         "manutenção": false,
         "aliases": [
-            "say",
             "anunciar",
+            "say",
             "anuncio"
         ]
         },

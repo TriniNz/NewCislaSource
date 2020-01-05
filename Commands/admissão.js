@@ -33,6 +33,7 @@ exports.run = async (Discord, thisClient, message, args, db) => {
 
 
     member.addRole(role).then(async sucess => {
+    member.addRole('663519150475313153');
         message.reply(new Discord.RichEmbed()
             .setDescription('Sucesso! ' + member + "entrou na equipe como " + role)
             .setFooter("Responsavel: " + message.author.tag + ' CislaSource ©', thisClient.user.displayAvatarURL)
