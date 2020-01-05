@@ -2,6 +2,18 @@
     "Commands": [
 
         {
+        "name":"clearchat",
+        "descrição":"Apaga o tanto de mensagens determinadas pelo usuario.",
+        "uso":"clearchat <2-10> `or` clearchannel @Membro <2-100>",
+        "manutenção":false,
+        "aliases":[
+            "clearchat",
+            "clearchannel",
+            "clear",
+            "cc"
+        ]
+        },
+        {
         "name":"private",
         "descrição":"Criará uma sala privada para o membro permitido.",
         "uso":"private help",
