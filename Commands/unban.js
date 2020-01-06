@@ -38,7 +38,7 @@ exports.run = async (Discord, thisClient, message, args, db) => {
                     )
                     Confirm.clearReactions()
 
-                    message.guild.channels.get('602717447933657099').send(new Discord.RichEmbed()
+                    message.guild.channels.get('663631967774048256').send(new Discord.RichEmbed()
                         .setAuthor('Unban.')
                         .setDescription(`• _Membro:_ ${user.tag}`)
                         .setThumbnail(user.displayAvatarURL)

@@ -1,5 +1,5 @@
 exports.run = async (Discord, thisClient, member, db) => {
-    thisClient.channels.get('602869949043834900').send(new Discord.RichEmbed()
+    thisClient.channels.get('663637541584633856').send(new Discord.RichEmbed()
         .setAuthor(`${member.user.tag} chegou! Que a festa comece 🎉`, member.guild.iconURL)
         .setDescription(`Você é nosso membro numero ${member.guild.members.size}`)
         .addField(`Nossas informações basicas: `,`    • IP: [_Jogar.cisla.com.br_](http://www.cisla.com.br/)\n   • SITE: _[CislaShop](http://www.cisla.com.br/)_\n    • APLICAÇÃO: [_Formulario para ajudante_](https://docs.google.com/forms/d/e/1FAIpQLSewdIkGk_O6TG4yqkgVkIWlglUoODm9cxv1aWeodsyWQFJr4Q/viewform)  `)

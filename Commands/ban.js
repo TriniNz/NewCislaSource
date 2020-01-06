@@ -31,7 +31,7 @@ exports.run = async (Discord, thisClient, message, args, db) => {
             .setColor('#f83989')
         ).then(msg => {message.delete(15*1000); msg.delete(15*1000)})
 
-        message.guild.channels.get('602717447933657099').send(new Discord.RichEmbed()
+        message.guild.channels.get('663631967774048256').send(new Discord.RichEmbed()
             
             .setAuthor('Banimento.')
             .setDescription(`• _Membro:_ ${member}\n• _Comentario:_ ${comentario}`)
