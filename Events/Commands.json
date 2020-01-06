@@ -1,6 +1,26 @@
 {
     "Commands": [
-
+        {
+        "name":"bk",
+        "descrição":"Comando privado.",
+        "uso":"Comando privado.",
+        "manutenção":false,
+        "aliases":[
+            "bk"
+        ]
+        },
+        {
+        "name":"warn",
+        "descrição":"Dá um aviso ao usuario mercado, após exceder o limite o mesmo será expulso.",
+        "uso":"warn @membro motivo(opcional).",
+        "manutenção":false,
+        "aliases":[
+            "warn",
+            "aviso",
+            "avisar",
+            "wn"
+        ]
+        },
         {
         "name":"clearchat",
         "descrição":"Apaga o tanto de mensagens determinadas pelo usuario.",
