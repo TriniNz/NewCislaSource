@@ -6,6 +6,8 @@ exports.run = async (Discord, thisClient, message, db, dbcmd, cooldown) => {
     let devmod = false
 
     if(message.author.bot) return;
+    
+    if(message.channel.id == '657721551776514069') return;
 
     if(message.content.indexOf(">") == 0 && message.channel.id == '657721574056787979') {message.react('✅'); message.react('❎')}
 
