@@ -2,7 +2,7 @@ exports.run = async (Discord, thisClient, message, db, dbcmd, cooldown) => {
 
     let prefix = "!"
 
-    let ranksys = false
+    let ranksys = true
     let devmod = false
 
     if(message.author.bot) return;
