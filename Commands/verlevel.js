@@ -40,44 +40,43 @@ exports.run = async (Discord, thisClient, message, args, db) => {
     if(message.mentions.members.size <= 0) member = message.member
 
     try {
-        
+
         let valor = db.get('RankSystem').find({"id": member.id}).value();
 
-        let fotoURL = member.user.displayAvatarURL;
+        let fotoURL = message.author.displayAvatarURL;
 
         let xpDisplay = valor.XPdisplay;
         let xp = valor.XPcount;
         let name = member.user.username;
         let level = valor.Level;
-        let limiteDisplay = formatNumber(level*500)
-    
+
         let limite = level*500
         let ondasys = Math.floor(xp/level*100/550)
-    
-        let userphoto = await Jimp.read(fotoURL);
-        let background = await Jimp.read('https://cdn.discordapp.com/attachments/570796258835562496/664734896517939201/Background.png');
-        let bar = await Jimp.read('https://cdn.discordapp.com/attachments/570796258835562496/664734965975744522/bar.png');
-        let firstground = await Jimp.read('https://cdn.discordapp.com/attachments/570796258835562496/664735023425126400/firstground.png');
-        let icon = await Jimp.read('https://cdn.discordapp.com/attachments/570796258835562496/664755763826262053/iconurl.png')
-        let mask = await Jimp.read('https://cdn.discordapp.com/attachments/570796258835562496/664734810006224896/mask.png');
 
-        let font = await Jimp.loadFont('./font/font.fnt');
+        let Background = await Jimp.read('https://cdn.discordapp.com/attachments/560256504998133780/641377423492907008/Background.png')
+        let ondaVerde = await Jimp.read('https://cdn.discordapp.com/attachments/560256504998133780/641377441235075132/poca_verde.png')
+        let firstGround = await Jimp.read('https://cdn.discordapp.com/attachments/560256504998133780/641377437372121088/first_ground.png')
+        let foto = await Jimp.read(fotoURL)
+        let mascara = await Jimp.read('https://cdn.discordapp.com/attachments/560256504998133780/641377439477399553/mask.png')
 
-        mask.resize(760, 760);
-        userphoto.resize(760, 760);
-        icon.resize(240, 240)
+        let font = await Jimp.loadFont(Jimp.FONT_SANS_64_WHITE)
+        let fontXP = await Jimp.loadFont(Jimp.FONT_SANS_32_WHITE)
 
-        userphoto.mask(mask);
-        
+        mascara.resize(150, 150);
+        foto.resize(150, 150);
+        foto.mask(mascara);
 
-        background.composite(bar, -2215+ondasys*22, 0);
-        background.composite(firstground, 0, 0);
-        background.composite(userphoto, 112, 442-10)
-        background.composite(icon, 597 + 25, 727 + 210)
+        Background.composite(ondaVerde, 0, 100-ondasys);
+        Background.composite(firstGround, 0, 0);
+        Background.composite(foto, 49, 32);
 
-        background.print(font, 1066, 750 + 20, name)
-        background.print(font, 1582, 981, ondasys + "%")
-        background.print(font, 1258, 1219, "XP : " + xpDisplay + "/" + limiteDisplay)
+        Background.print(font, 200, 11, name);
+        Background.print(fontXP, 300, 85, xpDisplay);
+        Background.print(fontXP, 355, 140, level).write('image.png');
+
+        message.channel.send(``, {files: ['image.png']}).then(m => {
+            Fs.unlink('image.png', (err) => {if(err) console.log(err)})
+        })
 
 
     } catch (err) {
@@ -87,7 +86,7 @@ exports.run = async (Discord, thisClient, message, args, db) => {
             .setFooter('CislaSource ©', thisClient.user.displayAvatarURL)
             .setColor('#f83989')
         ).then(msg => {message.delete(15*1000); msg.delete(15*1000)})
-        
+
     }
 
-}
+} 
