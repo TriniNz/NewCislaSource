@@ -32,9 +32,11 @@ exports.run = async (Discord, thisClient, message, args, db) => {
         ).then(msg => {message.delete(15*1000); msg.delete(15*1000)})
 
         message.guild.channels.get('663631967774048256').send(new Discord.RichEmbed()
-            
-            .setAuthor('Banimento.')
-            .setDescription(`• _Membro:_ ${member}\n• _Comentario:_ ${comentario}`)
+            .setAuthor('Punição')
+            .setDescription("Um membro acabou de ser exilado.")
+            .addField('Membro: ', member.user.username)
+            .addField('Ação:', "Ban")
+            .addField('Motivo: ', comentario)
             .setThumbnail(member.user.displayAvatarURL)
             .setFooter(`Responsavel: ${message.author.tag}. CislaSource ©`)
             .setColor('#f83989')

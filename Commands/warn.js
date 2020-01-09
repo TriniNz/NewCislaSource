@@ -65,13 +65,13 @@ exports.run = async (Discord, thisClient, message, args) => {
         )
     })
 
-    if(warn2find) Mention.kick("O membro excedeu o numero de avisos.").then(Sucess => {
+    if(warn2find) Mention.ban("O membro excedeu o numero de avisos.").then(Sucess => {
 
         Mention.send("Esta é uma copia do motivo de sua punição.",new Discord.RichEmbed()
             .setAuthor("Punição.")
-            .setDescription("Um membro acabou de ser expulso.")
+            .setDescription("Um membro acabou de ser banido.")
             .addField('Membro: ',`${Mention.user.username}`)
-            .addField('Ação: ', "Expulsão, o membro avisado diversas vezes.")
+            .addField('Ação: ', "Banimento, o membro avisado diversas vezes.")
             .addField("Motivo: ", Motivo)
             .setThumbnail(Mention.user.displayAvatarURL)
             .setFooter(`Responsavel: ${message.author.username} • CislaSource ©️`, client.user.displayAvatarURL)
@@ -79,15 +79,15 @@ exports.run = async (Discord, thisClient, message, args) => {
         ).catch(err => {})
 
         message.channel.send(new Discord.RichEmbed()
-            .setFooter(`O membro foi expulso. Número de avisos de ${Mention.user.username}: 3/3. • CislaSource ©️`)
+            .setFooter(`O membro foi banimento. Número de avisos de ${Mention.user.username}: 3/3. • CislaSource ©️`)
             .setColor('#f83989')
         )
 
         client.channels.get('663631967774048256').send(new Discord.RichEmbed()
             .setAuthor("Punição.")
-            .setDescription("Um membro acabou de ser expulso.")
+            .setDescription("Um membro acabou de ser banido.")
             .addField('Membro: ',`${Mention.user.username}`)
-            .addField('Ação: ', "Expulsão, o membro avisado diversas vezes.")
+            .addField('Ação: ', "Banimento, o membro avisado diversas vezes.")
             .addField("Motivo: ", Motivo)
             .setThumbnail(Mention.user.displayAvatarURL)
             .setFooter(`Responsavel: ${message.author.username} • CislaSource ©️`, client.user.displayAvatarURL)

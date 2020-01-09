@@ -33,8 +33,11 @@ exports.run = async (Discord, thisClient, message, args, db) => {
 
     message.guild.channels.get('663631967774048256').send(new Discord.RichEmbed()
         
-        .setAuthor('Expulsão.')
-        .setDescription(`• _Membro:_ ${member}\n• _Comentario:_ ${comentario}`)
+        .setAuthor('Punição')
+        .setDescription("Um membro acabou de ser expulso.")
+        .addField('Membro: ', member.user.username)
+        .addField('Ação:', "Expulsão")
+        .addField('Motivo: ', comentario)
         .setThumbnail(member.user.displayAvatarURL)
         .setFooter(`Responsavel: ${message.author.tag}. CislaSource ©`)
         .setColor('#f83989')

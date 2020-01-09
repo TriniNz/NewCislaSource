@@ -1,6 +1,26 @@
 {
     "Commands": [
         {
+        "name":"unmute",
+        "descrição":"Remove o cargo que impede o membro mencionado de falar.",
+        "uso":"unmute @Membro Motivo(opcional)",
+        "manutenção":false,
+        "aliases":[
+            "unmute"
+        ]
+        },
+        {
+        "name":"mute",
+        "descrição":"Aplica um cargo que impede o membro mencionado de falar.",
+        "uso":"mute @Membro Motivo(opcional)",
+        "manutenção":false,
+        "aliases":[
+            "mute",
+            "mutar",
+            "calar"
+        ]
+        },
+        {
         "name":"bk",
         "descrição":"Comando privado.",
         "uso":"Comando privado.",
