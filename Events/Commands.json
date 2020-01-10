@@ -1,6 +1,15 @@
 {
     "Commands": [
         {
+            "name":"addemoji",
+            "desc":"Adiciona o emoji desejado.",
+            "uso":"addemoji URL `or` Attachment Nome",
+            "manutenção":false,
+            "aliases":[
+                "addemoji"
+            ]
+        },
+        {
         "name":"unmute",
         "descrição":"Remove o cargo que impede o membro mencionado de falar.",
         "uso":"unmute @Membro Motivo(opcional)",
