@@ -1,0 +1,135 @@
+.cash5 {
+    width: 300;
+    height: 400;
+    background-color: #ffffff;
+    position:  relative; top: 0px; left: 0px;
+    border-radius: 3px;
+    font-family: roboto light;
+    box-shadow: 0px 5px #5555551c;
+    transition: all .4s;
+}
+.cash5:hover {
+    padding-right: 20px;
+    padding-left: 20px;
+
+}
+.cash5 img {
+    position: relative; top: 50px; left: 70px;
+    height: 165px;
+}
+.cash5 h1 {
+    position: relative; top: 60px; left: 120px;
+}
+.cash5 .btn {
+    position: relative; top: 80px; left: 75px;
+}
+.cash5 .btn .compras1 {
+    font-family: "roboto light";
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px;
+    background-color: #e4e4e4;
+    border-radius: 3px;
+    box-shadow: 2px 2px #5555550a;
+    transition: all .4s;
+}
+.cash5 .btn .compras1:hover {
+    background-color: #f3f2f2;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    box-shadow: 2px 2px #55555534;
+}
+.cash5 .btn .compras1:active {
+    background-color: #5edb5e;
+}
+.cash5 .btn .info1 {
+    font-family: "roboto light";
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px;
+    background-color: #e4e4e4;
+    border-radius: 3px;
+    box-shadow: 2px 2px #5555550a;
+    transition: all .4s;
+}
+.cash5 .btn .info1:hover {
+    background-color: #f3f2f2;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    box-shadow: 2px 2px #55555534;
+}
+.cash5 .btn .info1:active {
+    background-color: #5edb5e;
+}
+
+.cash20 {
+    width: 300;
+    height: 400;
+    background-color: #ffffff;
+    position:  relative; top: 0px; left: 0px;
+    border-radius: 3px;
+    font-family: roboto light;
+    box-shadow: 0px 5px #5555551c;
+    transition: all .4s;
+}
+.cash20:hover {
+    padding-right: 20px;
+    padding-left: 20px;
+
+}
+.cash20 img {
+    position: relative; top: 50px; left: 70px;
+    height: 165px;
+}
+.cash20 h1 {
+    position: relative; top: 60px; left: 72px;
+}
+.cash20 .btn {
+    position: relative; top: 80px; left: 75px;
+}
+.cash20 .btn .compras1 {
+    font-family: "roboto light";
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px;
+    background-color: #e4e4e4;
+    border-radius: 3px;
+    box-shadow: 2px 2px #5555550a;
+    transition: all .4s;
+}
+.cash20 .btn .compras1:hover {
+    background-color: #f3f2f2;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    box-shadow: 2px 2px #55555534;
+}
+.cash20 .btn .compras1:active {
+    background-color: #5edb5e;
+}
+.cash20 .btn .info1 {
+    font-family: "roboto light";
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px;
+    background-color: #e4e4e4;
+    border-radius: 3px;
+    box-shadow: 2px 2px #5555550a;
+    transition: all .4s;
+}
+.cash20 .btn .info1:hover {
+    background-color: #f3f2f2;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    box-shadow: 2px 2px #55555534;
+}
+.cash20 .btn .info1:active {
+    background-color: #5edb5e;
+}
