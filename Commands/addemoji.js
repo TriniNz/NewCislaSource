@@ -1,6 +1,6 @@
 exports.run = async (Discord, thisClient, message, args) => {
 
-    let clinet = thisClient
+    let client = thisClient
     
     if(!message.member.hasPermission("MANAGE_EMOJIS")) return message.channel.send(new Discord.RichEmbed()
         .setDescription('Você não tem permissão para executar este comando.')
