@@ -1,6 +1,36 @@
 {
     "Commands": [
         {
+        "name":"ip",
+        "desc":"Lhe envia o IP oficial.",
+        "uso":"ip",
+        "manutenção":false,
+        "aliases":[
+            "ip",
+            "servidor"
+        ]
+        },
+        {
+        "name":"form",
+        "desc":"Lhe envia o URL do formulario oficial.",
+        "uso":"form",
+        "manutenção":false,
+        "aliases":[
+            "form",
+            "formulario"
+        ]
+        },
+        {
+        "name":"site",
+        "desc":"Lhe envia o URL do site oficial.",
+        "uso":"site",
+        "manutenção":false,
+        "aliases":[
+            "site",
+            "loja"
+        ]
+        },
+        {
             "name":"addemoji",
             "desc":"Adiciona o emoji desejado.",
             "uso":"addemoji URL `or` Attachment Nome",
