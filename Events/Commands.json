@@ -1,6 +1,16 @@
 {
     "Commands": [
         {
+        "name":"vote",
+        "desc":"Envia uma mensagem com direito a voto de melhor ajudante.",
+        "uso":"vote",
+        "manutenção":false,
+        "aliases":[
+            "vote",
+            "votar"
+        ]
+        },
+        {
         "name":"ip",
         "desc":"Lhe envia o IP oficial.",
         "uso":"ip",
@@ -27,7 +37,8 @@
         "manutenção":false,
         "aliases":[
             "site",
-            "loja"
+            "loja",
+            "dar-dinheiro-pro-lucas"
         ]
         },
         {
