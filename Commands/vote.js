@@ -45,10 +45,12 @@ exports.run = async (Discord, client, message, args, db) => {
         .setDescription(txt)
     );
 
-    let filter = (F) => F.author.id == message.author.id && F.content > 0 && F.content < Members.length + 1
+    let filter = (F) => F.author.id == message.author.id;
     const Collector = message.channel.createMessageCollector(filter, {max: 1});
 
     Collector.on('collect', C => {
+
+        if(F.content < 0 && F.content > Members.length + 1) return;
 
         let Member = message.guild.members.get(Members[C.content - 1]);
         let AjudanteVotado = db.get('voteSystem').find({"MemberVotedID": Member.id}).value();

@@ -2,6 +2,15 @@
     "Commands": [
         {
         "name":"vote",
+        "desc":"Lhe mostra as opçoes de voto.",
+        "uso":"votes",
+        "manutenção":false,
+        "aliases":[
+            "votes"
+        ]
+        },
+        {
+        "name":"vote",
         "desc":"Envia uma mensagem com direito a voto de melhor ajudante.",
         "uso":"vote",
         "manutenção":false,
