@@ -43,6 +43,8 @@ exports.run = async (Discord, client, message, args, db) => {
 
     let Msg = await message.channel.send(new Discord.RichEmbed()
         .setDescription(txt)
+        .setFooter('CislaSource ©', thisClient.user.displayAvatarURL)
+        .setColor('#f83989')
     );
 
     let filter = (F) => F.author.id == message.author.id;
@@ -52,6 +54,7 @@ exports.run = async (Discord, client, message, args, db) => {
 
         if(F.content < 0 && F.content > Members.length + 1) return;
 
+        message.delete(500)
         let Member = message.guild.members.get(Members[C.content - 1]);
         let AjudanteVotado = db.get('voteSystem').find({"MemberVotedID": Member.id}).value();
         

@@ -1,7 +1,7 @@
 {
     "Commands": [
         {
-        "name":"vote",
+        "name":"votes",
         "desc":"Lhe mostra as opçoes de voto.",
         "uso":"votes",
         "manutenção":false,

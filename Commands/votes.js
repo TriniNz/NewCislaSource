@@ -1,8 +1,11 @@
 exports.run = async (Discord, thisClient, message, args, db) => {
-
+  
+    let role = message.guild.roles.find(R => R.name == "★» Ajudante");
     let getMembers = role.members;
     let Members = [];
     getMembers.map(U => Members.push(U.id))
+    
+  let txt = ""
 
     for(let x=0; x < Members.length; x++) {
         let Member = message.guild.members.get(Members[x]);
@@ -18,5 +21,7 @@ exports.run = async (Discord, thisClient, message, args, db) => {
 
     let Msg = await message.channel.send(new Discord.RichEmbed()
         .setDescription(txt)
+        .setFooter('CislaSource ©', thisClient.user.displayAvatarURL)
+        .setColor('#f83989')
     );
 }
