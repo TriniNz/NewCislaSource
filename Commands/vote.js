@@ -1,4 +1,6 @@
-exports.run = async (Discord, client, message, args, db) => {
+exports.run = async (Discord, thisClient, message, args, db) => {
+
+    let client = thisClient
 
     let dados = db.get('voteSystem').value()
     let confirm = db.get('voteSystem').find({"MemberID": message.author.id}).value()
