@@ -54,7 +54,7 @@ exports.run = async (Discord, thisClient, message, args, db) => {
 
     Collector.on('collect', C => {
 
-        if(F.content < 0 && F.content > Members.length + 1) return;
+      if(isNaN(C.content)) return undefined;
 
         message.delete(500)
         let Member = message.guild.members.get(Members[C.content - 1]);
