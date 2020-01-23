@@ -9,14 +9,14 @@ const CislaProtect = true
 const express = require("express");
 const app = express();
 
-app.use(express.static("public"));
+app.use(express.static("/app/Package/CislaSite/public"));
 
 app.get("/", function(request, response) {
-  response.sendFile(__dirname + "/Package/views/index.html");
+  response.sendFile(__dirname + "/Package/CislaSite/views/index.html");
 });
 
 const listener = app.listen(process.env.PORT, function() {
-  console.log("Site iniciado na porta: " + listener.address().port);
+  console.log("Site iniciado na porta: " + listener.address().port + "\n\n");
 });
 
 //BOTS
