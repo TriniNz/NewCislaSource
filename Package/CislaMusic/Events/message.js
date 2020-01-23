@@ -25,15 +25,15 @@ exports.run = async (Discord, client, message, music) => {
 
     if(message.content.indexOf(prefix) != 0) return undefined;
 
-    if(cmd == "ajuda" || cmd == "help" || cmd == "h") return Path_Help.run(Discord, client, message, args, music, loop);
-    if(cmd == "loop" || cmd == "repetir") return Path_Loop.run(Discord, client, message, args, music, loop);
-    if(cmd == "pause" || cmd == "pausar") return Path_Pause.run(Discord, client, message, args, music, loop);
-    if(cmd == "play" || cmd == "tocar") return Path_Play.run(Discord, client, message, args, music, loop);
-    if(cmd == "playlistloop") return Path_PlaylistLoop.run(Discord, client, message, args, music, loop);
-    if(cmd == "playlist" || cmd == "lista") return Path_Playlist.run(Discord, client, message, args, music, loop);
-    if(cmd == "skip" || cmd == "pular") return Path_Skip.run(Discord, client, message, args, music, loop);
-    if(cmd == "stop" || cmd == "parar") return Path_Stop.run(Discord, client, message, args, music, loop);
-    if(cmd == "unpause" || cmd == "despausar") return Path_Unpause.run(Discord, client, message, args, music, loop);
+    if(cmd == "ajuda" || cmd == "help" || cmd == "h") return Path_Help.run(Discord, client, message, args, music);
+    if(cmd == "loop" || cmd == "repetir") return Path_Loop.run(Discord, client, message, args, music);
+    if(cmd == "pause" || cmd == "pausar") return Path_Pause.run(Discord, client, message, args, music);
+    if(cmd == "play" || cmd == "tocar") return Path_Play.run(Discord, client, message, args, music);
+    if(cmd == "playlistloop") return Path_PlaylistLoop.run(Discord, client, message, args, music);
+    if(cmd == "playlist" || cmd == "lista") return Path_Playlist.run(Discord, client, message, args, music);
+    if(cmd == "skip" || cmd == "pular") return Path_Skip.run(Discord, client, message, args, music);
+    if(cmd == "stop" || cmd == "parar") return Path_Stop.run(Discord, client, message, args, music);
+    if(cmd == "unpause" || cmd == "despausar") return Path_Unpause.run(Discord, client, message, args, music);
     if(cmd) return message.channel.send(new Discord.RichEmbed()
         .setDescription(`Ops. Este comando não existe!`)
         .setFooter('CislaSource ©', client.user.displayAvatarURL)
