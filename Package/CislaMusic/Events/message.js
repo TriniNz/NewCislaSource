@@ -23,6 +23,8 @@ exports.run = async (Discord, client, message, music) => {
     let Path_Stop = require('../Commands/stop.js');
     let Path_Unpause = require('../Commands/unpause.js');
 
+    if(!message.content.indexOf(prefix) == 0) return undefined;
+
     if(cmd == "ajuda" || cmd == "help" || cmd == "h") return Path_Help.run(Discord, client, message, args, music, loop);
     if(cmd == "loop" || cmd == "repetir") return Path_Loop.run(Discord, client, message, args, music, loop);
     if(cmd == "pause" || cmd == "pausar") return Path_Pause.run(Discord, client, message, args, music, loop);

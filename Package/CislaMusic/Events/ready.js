@@ -1,6 +1,6 @@
 exports.run = async (Discord, client, music) => {
 
-  setTimeout(() => console.log("CislaMusic - OK!" + Math.floor(client.ping)))
+  setTimeout(() => console.log("CislaMusic - OK! Ping: " + Math.floor(thisClient.ping) + "MS"))
 
     setInterval(() => {
       if(music.playlist) client.user.setPresence({ status: "idle", game: {name: `Estou tocando: ${music.playlist[0].title}`, type: "streaming", url: `https://www.twitch.tv/ztrininz_`}})
