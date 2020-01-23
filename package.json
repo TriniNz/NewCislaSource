@@ -1,8 +1,7 @@
 {
-  "name": "CislaSourceV2",
-  "version": "2.0.0",
-  "description": "Segunda versão do CislaSource.",
-  "invite": "https://discord.gg/TwjH6ww",
+  "name": "CislaPackage",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,11 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.5.1",
-    "dotenv": "^8.1.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "jimp": "^0.8.5",
     "lowdb": "^1.0.0",
-    "pastebin-js": "^1.0.3",
-    "request": "^2.88.0"
+    "yt-search": "^1.1.2",
+    "ytdl-core": "^1.0.7"
   }
 }
