@@ -5,7 +5,7 @@ exports.run = async (Discord, thisClient) => {
     const BoleanAutoConsoleMSG = false;
     const BoleanAutoTabbleEdit = true
 
-    setTimeout(() => console.log("CislaSource - OK! Ping: " + Math.floor(thisClient.ping) + "MS"), 3*1000)
+    setTimeout(() => console.log("\x1b[37m","CislaSource - OK! Ping: " + Math.floor(thisClient.ping) + "MS", "\x1b[37m"), 3*1000)
 
     function AutoEditStats() {
 

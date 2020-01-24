@@ -1,9 +1,9 @@
 //Controle
 
 //true = ligado | false = desligado.
-const CislaSource = true
+const CislaSource = false
 const CislaMusic = true
-const CislaProtect = true
+const CislaProtect = false
 
 //Site
 const express = require("express");
@@ -79,15 +79,15 @@ Client_CislaMusic.on('ready', async () => {
     let client = Client_CislaMusic;
   
     let readyLocal = require('./Package/CislaMusic/Events/ready.js')
-    return readyLocal.run(Discord, client, music)
-});
+        return readyLocal.run(Discord, client, music)
+    });
 
-Client_CislaMusic.on('message', async message => {
-    let client = Client_CislaMusic;
+    Client_CislaMusic.on('message', async message => {
+        let client = Client_CislaMusic;
   
-    let messageLocal = require('./Package/CislaMusic/Events/message.js')
-    return messageLocal.run(Discord, client, message, music)
-});    
+        let messageLocal = require('./Package/CislaMusic/Events/message.js')
+        return messageLocal.run(Discord, client, message, music)
+    });    
 
 if(CislaMusic) Client_CislaMusic.login(process.env.Token_CislaMusic)
 
