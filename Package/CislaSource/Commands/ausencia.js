@@ -21,7 +21,7 @@ exports.run = async (Discord, thisClient, message, args) => {
         .setFooter('CislaSource ©️', client.user.displayAvatarURL)
     ).then(msg => {msg.delete(15*1000); message.delete(15*1000)})
 
-    message.guild.channels.get('670441853455433729').send(new Discord.RichEmbed()
+    message.guild.channels.get('657721578263674910').send(new Discord.RichEmbed()
         .setAuthor('Ausência. ', thisClient.user.displayAvatarURL)
         .setDescription(`\n\n• _Membro:_ ${message.author}\n• _Motivo:_  ${Txt[0]}.\n• _Data do retorno:_ ${Txt[1]}\n`)
         .setThumbnail(message.author.displayAvatarURL)
