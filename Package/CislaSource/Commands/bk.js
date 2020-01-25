@@ -6,7 +6,7 @@ exports.run = async (Discord, thisClient, message, args) => {
     let client = thisClient
 
     if(message.author.id !== "429825875467304960") {
-        return message.channel.send("Você não pode fazer isso.").then(msg => msg.delete(15*3000))
+        return message.channel.send("Este é um comando privado aos desenvolvedores.").then(msg => msg.delete(15*3000))
     }
     var time = Date().split(/ +/g);
 

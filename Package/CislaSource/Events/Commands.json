@@ -1,6 +1,17 @@
 {
     "Commands": [
         {
+        "name":"ausencia",
+        "desc":"Envia um Embed notificando a sua ausencia.",
+        "uso":"ausencia Motivo | Data de retorno.",
+        "manutenção":false,
+        "aliases":[
+            "ausencia",
+            "notificar-aus",
+            "aus"
+        ]
+        },
+        {
         "name":"votes",
         "desc":"Lhe mostra as opçoes de voto.",
         "uso":"votes",
