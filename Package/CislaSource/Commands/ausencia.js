@@ -22,11 +22,11 @@ exports.run = async (Discord, thisClient, message, args) => {
     ).then(msg => {msg.delete(15*1000); message.delete(15*1000)})
 
     message.guild.channels.get('670441853455433729').send(new Discord.RichEmbed()
-        .setAuthor(`Ausencia.`, message.author.displayAvatarURL)
-        .addField(`Membro: `, `${message.author.username}`)
-        .addField(`Motivo:`,`${Txt[0]}`)
-        .addField(`Data do retorno:`,`${Txt[1]}`)
+        .setAuthor('Ausência. ', thisClient.user.displayAvatarURL)
+        .setDescription(`\n\n• _Membro:_ ${message.author}\n• _Motivo:_  ${Txt[0]}.\n• _Data do retorno:_ ${Txt[1]}\n`)
+        .setThumbnail(message.author.displayAvatarURL)
+        .setFooter(`Responsavel: ${message.author.tag}. CislaSource ©`, message.author.displayAvatarURL)
         .setColor('#f83989')
-        .setFooter('CislaSource ©️', client.user.displayAvatarURL)
+        .setTimestamp(new Date())
     )
 }
