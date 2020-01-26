@@ -206,7 +206,7 @@ Client_CislaProtect.on('message', message => {
                 .setDescription(`**Status do sistema:**\n • CislaSource: ${infoCislaSource}\n• CislaMusic: ${infoCislaMusic}\n• CislaProtect: ${infoCislaProtect}\n\n **Infomações do sistema:**\n• CPU: ${Math.floor(percent)}% Utilizado. \n• RAM: ${Math.floor(OS.freemem()/OS.totalmem()*100)}% Utilizado.`)
                 .setColor('#f83989')
                 .setTimestamp(new Date())
-            ) 
+            ).then(msg => {msg.delete(15*1000); message.delete(15*1000)})
         });
     }
 })
