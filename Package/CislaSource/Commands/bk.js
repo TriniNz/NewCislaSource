@@ -19,8 +19,7 @@ exports.run = async (Discord, thisClient, message, args) => {
     .then(function (data) {
         let embed = new Discord.RichEmbed()
             .setDescription(`DataBase copiada com sucesso. Backup foi enviado no seu privado.`)
-            .setColor("#6699FF")
-            .setFooter("Cisla ©")
+            .setColor('#f83989')
             .setTimestamp(new Date())
         message.channel.send(embed).then(msg => msg.delete(15*1000))
 
