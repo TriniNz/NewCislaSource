@@ -186,9 +186,9 @@ Client_CislaProtect.on('raw', async raw => {
 Client_CislaProtect.on('message', message => {
     let client = Client_CislaProtect
 
-    let infoCislaSource = Client_CislaSource.ping;
-    let infoCislaMusic = Client_CislaMusic.ping;
-    let infoCislaProtect = Client_CislaProtect.ping;
+    let infoCislaSource = Math.floor(Client_CislaSource.ping);
+    let infoCislaMusic = Math.floor(Client_CislaMusic.ping);
+    let infoCislaProtect = Math.floor(Client_CislaProtect.ping);
 
     if(infoCislaSource == "NaN") infoCislaSource = "OFF, :("; else infoCislaSource = `ON! ${infoCislaSource}ms.`;
     if(infoCislaMusic == "NaN") infoCislaMusic = "OFF, :("; else infoCislaMusic = `ON! ${infoCislaMusic}ms.`;
