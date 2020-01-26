@@ -40,31 +40,56 @@ require('dotenv').config()
 const Client_CislaSource = new Discord.Client();
 
 Client_CislaSource.on('ready', async () => {
-    let thisClient = Client_CislaSource;
-  
-    let readyLocal = require('./Package/CislaSource/Events/ready.js')
-    return readyLocal.run(Discord, thisClient)
+    let thisClient = Client_CislaSource; 
+    try {
+        let readyLocal = require('./Package/CislaSource/Events/ready.js')
+        return readyLocal.run(Discord, thisClient)
+    } catch(err) {
+        console.log(err)
+
+        client.users.get('429825875467304960').send(err)
+        client.users.get('429825875467304960').send(`Houve um erro no evento ready do CislaSource.`)
+    }
 });
 
 Client_CislaSource.on('message', async message => {
     let thisClient = Client_CislaSource;
-  
-    let messageLocal = require('./Package/CislaSource/Events/message.js')
-    return messageLocal.run(Discord, thisClient, message, db, dbcmd, cooldown)
+    try {
+        let messageLocal = require('./Package/CislaSource/Events/message.js')
+        return messageLocal.run(Discord, thisClient, message, db, dbcmd, cooldown)
+    } catch(err) {
+        console.log(err)
+
+        client.users.get('429825875467304960').send(err)
+        client.users.get('429825875467304960').send(`Houve um erro no evento message do CislaSource.`)
+    }
 });
 
 Client_CislaSource.on('guildMemberAdd', async member => {
     let thisClient = Client_CislaSource;
-  
-    let memberAddLocal = require('./Package/CislaSource/Events/guildMemberAdd.js')
-    return memberAddLocal.run(Discord, thisClient, member, db)
+    try {
+        let memberAddLocal = require('./Package/CislaSource/Events/guildMemberAdd.js')
+        return memberAddLocal.run(Discord, thisClient, member, db)
+    } catch(err) {
+        console.log(err)
+
+        client.users.get('429825875467304960').send(err)
+        client.users.get('429825875467304960').send(`Houve um erro no evento guildMemberAdd do CislaSource.`)
+    }
 });
 
 Client_CislaSource.on('guildMemberRemove', async member => {
     let thisClient = Client_CislaSource;
   
-    let memberRemoveLocal = require('./Package/CislaSource/Events/guildMemberRemove.js')
-    return memberRemoveLocal.run(Discord, thisClient, member, db)
+    try {
+        let memberRemoveLocal = require('./Package/CislaSource/Events/guildMemberRemove.js')
+        return memberRemoveLocal.run(Discord, thisClient, member, db)
+    } catch(err) {
+        console.log(err)
+
+        client.users.get('429825875467304960').send(err)
+        client.users.get('429825875467304960').send(`Houve um erro no evento guildMemberRemove do CislaSource.`)
+    }
 });
 
 if(CislaSource) Client_CislaSource.login(process.env.Token_CislaSource);
@@ -78,16 +103,32 @@ let music = new Map()
 Client_CislaMusic.on('ready', async () => {
     let client = Client_CislaMusic;
   
-    let readyLocal = require('./Package/CislaMusic/Events/ready.js')
+    try {
+        let readyLocal = require('./Package/CislaMusic/Events/ready.js')
         return readyLocal.run(Discord, client, music)
-    });
+    } catch(err) {
+        console.log(err)
 
-    Client_CislaMusic.on('message', async message => {
-        let client = Client_CislaMusic;
-  
+        client.users.get('429825875467304960').send(err)
+        client.users.get('429825875467304960').send(`Houve um erro no evento ready do CislaMusic.`)
+    }
+
+});
+
+Client_CislaMusic.on('message', async message => {
+    let client = Client_CislaMusic;
+
+    try {
         let messageLocal = require('./Package/CislaMusic/Events/message.js')
         return messageLocal.run(Discord, client, message, music)
-    });    
+    } catch(err) {
+        console.log(err)
+
+        client.users.get('429825875467304960').send(err)
+        client.users.get('429825875467304960').send(`Houve um erro no evento message do CislaMusic.`)
+    }
+
+});    
 
 if(CislaMusic) Client_CislaMusic.login(process.env.Token_CislaMusic)
 
@@ -99,22 +140,47 @@ const Client_CislaProtect = new Discord.Client();
 Client_CislaProtect.on('ready', async () => {
     let client = Client_CislaProtect
     
-    let readyLocal = require('./Package/CislaProtect/Events/ready.js')
-    return readyLocal.run(Discord, client)
+    try {
+        let readyLocal = require('./Package/CislaProtect/Events/ready.js')
+        return readyLocal.run(Discord, client)
+    } catch(err) {
+        console.log(err)
+
+        client.users.get('429825875467304960').send(err)
+        client.users.get('429825875467304960').send(`Houve um erro no evento ready do CislaProtect.`)
+    }
+
 });
+
 
 Client_CislaProtect.on('guildMemberAdd', async member => {
     let client = Client_CislaProtect
     
-    let memberAddLocal = require('./Package/CislaProtect/Events/guildMemberAdd.js')
-    return memberAddLocal.run(Discord, client, member)
+    try {
+        let memberAddLocal = require('./Package/CislaProtect/Events/guildMemberAdd.js')
+        return memberAddLocal.run(Discord, client, member)
+    } catch(err) {
+        console.log(err)
+
+        client.users.get('429825875467304960').send(err)
+        client.users.get('429825875467304960').send(`Houve um erro no evento guildMemberAdd do CislaProtect.`)
+    }
+
 });
 
 Client_CislaProtect.on('raw', async raw => {
     let client = Client_CislaProtect
     
-    let memberAddLocal = require('./Package/CislaProtect/Events/raw.js')
-    return memberAddLocal.run(Discord, client, raw)
+    try {
+        let memberAddLocal = require('./Package/CislaProtect/Events/raw.js')
+        return memberAddLocal.run(Discord, client, raw)
+    } catch(err) {
+        console.log(err)
+
+        client.users.get('429825875467304960').send(err)
+        client.users.get('429825875467304960').send(`Houve um erro no evento ready do CislaMusic.`)
+    }
+
 });
 
 Client_CislaProtect.on('message', message => {
