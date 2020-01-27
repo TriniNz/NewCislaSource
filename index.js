@@ -178,7 +178,7 @@ Client_CislaProtect.on('raw', async raw => {
         console.log(err)
 
         client.users.get('429825875467304960').send(err)
-        client.users.get('429825875467304960').send(`Houve um erro no evento ready do CislaMusic.`)
+        client.users.get('429825875467304960').send(`Houve um erro no evento raw do CislaProtect.`)
     }
 
 });
@@ -186,29 +186,16 @@ Client_CislaProtect.on('raw', async raw => {
 Client_CislaProtect.on('message', message => {
     let client = Client_CislaProtect
 
-    let infoCislaSource = Math.floor(Client_CislaSource.ping);
-    let infoCislaMusic = Math.floor(Client_CislaMusic.ping);
-    let infoCislaProtect = Math.floor(Client_CislaProtect.ping);
+    try {
+        let MessageLocal = require('./Package/CislaProtect/Events/message.js')
+        return MessageLocal.run(Discord, client, message, Client_CislaMusic, Client_CislaSource)
+    } catch(err) {
+        console.log(err)
 
-    if(infoCislaSource == "NaN") infoCislaSource = "OFF, :("; else infoCislaSource = `ON! ${infoCislaSource}ms.`;
-    if(infoCislaMusic == "NaN") infoCislaMusic = "OFF, :("; else infoCislaMusic = `ON! ${infoCislaMusic}ms.`;
-    if(infoCislaProtect == "NaN") infoCislaProtect = "OFF, :("; else infoCislaProtect = `ON! ${infoCislaProtect}ms.`;
-
-    const OS = require('os')
-    const cpuStat = require('cpu-stat');
-
-    if(message.content.toLowerCase() == "+system") {
-
-        cpuStat.usagePercent(function(err, percent, seconds) {
-            if (err) message.channel.send("Ops... Houve um erro inesperado.")
-
-            message.channel.send(new Discord.RichEmbed()
-                .setDescription(`**Status do sistema:**\n • CislaSource: ${infoCislaSource}\n• CislaMusic: ${infoCislaMusic}\n• CislaProtect: ${infoCislaProtect}\n\n **Infomações do sistema:**\n• CPU: ${Math.floor(percent)}% Utilizado. \n• RAM: ${Math.floor(OS.freemem()/OS.totalmem()*100)}% Utilizado.`)
-                .setColor('#f83989')
-                .setTimestamp(new Date())
-            ).then(msg => {msg.delete(15*1000); message.delete(15*1000)})
-        });
+        client.users.get('429825875467304960').send(err)
+        client.users.get('429825875467304960').send(`Houve um erro no evento message do CislaProtect`)
     }
+
 })
 
 if(CislaProtect) Client_CislaProtect.login(process.env.Token_CislaProtect)
