@@ -1,6 +1,18 @@
 {
     "Commands": [
         {
+        "name":"rban",
+        "desc":"Registra a punição em um determinado canal.",
+        "uso":"regban Username; Motivo; Provas.",
+        "manutenção":false,
+        "aliases":[
+            "rban",
+            "regban",
+            "registrarban",
+            "resban"
+        ]
+        },
+        {
         "name":"ausencia",
         "desc":"Envia um Embed notificando a sua ausencia.",
         "uso":"ausencia Motivo | Data de retorno.",
