@@ -1,6 +1,28 @@
 {
     "Commands": [
         {
+        "name":"gerencchat",
+        "desc":"Extenção do comando sunban: Gerencia o ticket criado.",
+        "uso":"gerencchat",
+        "manutenção":false,
+        "aliases":[
+            "gerencchat",
+            "gerenciar-chat",
+            "gticket"
+        ]
+        },
+        {
+        "name":"sunban",
+        "desc":"Cria um ticket para solicitar uma revisão de punição.",
+        "uso":"sunban",
+        "manutenção":false,
+        "aliases":[
+            "sban",
+            "sunban",
+            "solicitarunban"
+        ]
+        },
+        {
         "name":"rban",
         "desc":"Registra a punição em um determinado canal.",
         "uso":"regban Username; Motivo; Provas.",

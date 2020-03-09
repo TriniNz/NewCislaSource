@@ -2,8 +2,8 @@
 
 //true = ligado | false = desligado.
 const CislaSource = true
-const CislaMusic = true
-const CislaProtect = true
+const CislaMusic = false
+const CislaProtect = false
 
 //Site
 const express = require("express");
