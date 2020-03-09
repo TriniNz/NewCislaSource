@@ -16,6 +16,8 @@ exports.run = async (Discord, thisClient, message, args) => {
     ConfirmRC.on('collect', async rc => {
         const chCreated = await message.guild.createChannel(`⚓ ${message.author.username}`, {type: 'text', max: 1});
 
+        chCreated.send(`Olá, ${message.author}\n • Este é o seu canal de ticket. Para iniciar envie as seguintes informações: \`\`\`Seu nickname:\nResponsavel pela sua punição:\nDefesa:\nComprovações de sua defesa (Provas a seu favor): \`\`\`\n Caso não haja estas informações sua revisão pode ser negada instantaneamente.`)
+
         await chCreated.setParent('686375156255293543');
         await chCreated.lockPermissions();
 
@@ -29,8 +31,6 @@ exports.run = async (Discord, thisClient, message, args) => {
             .setFooter('CislaSource ©', thisClient.user.displayAvatarURL)
             .setColor('#f83989')
         ).then(msg => msg.delete(30*1000));
-
-        await chCreated.send(`Olá, ${message.author}\n • Este é o seu canal de ticket. Para iniciar envie as seguintes informações: \`\`\`Seu nickname:\nResponsavel pela sua punição:\nDefesa:\nComprovações de sua defesa (Provas a seu favor): \`\`\`\n Caso não haja estas informações sua revisão pode ser negada instantaneamente.`)
     })
 
 }

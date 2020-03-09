@@ -18,6 +18,7 @@ exports.run = async (Discord, thisClient, message, args) => {
         .setDescription('Escolha a ação:')
         .addField(':bellhop:','Encerrar Ticket.')
         .addField(':key:','Adicionar um membro ao chat.')
+        .addField('🔒','Remover permissão de fala de um membro.')
         .setFooter('Você tem 30s para aceitar • CislaSource ©', thisClient.user.displayAvatarURL)
         .setColor('#f83989')
     )
@@ -44,6 +45,22 @@ exports.run = async (Discord, thisClient, message, args) => {
                     });
 
                     msg.edit(m.mentions.members.first() + " agora pode falar neste canal.")
+                })
+
+                break;
+            case '🔑':
+                let msg = await message.channel.send('Marque o membro que será removido do canal.');
+
+                const filterr = M => M.author.id == message.author.id && M.mentions.members.size > 0
+                const inviteMember = message.channel.createMessageCollector(filterr, {time: 30*1000, max: 1});
+
+                inviteMember.on('collect', m => {
+                    message.channel.overwritePermissions(m.mentions.members.first(), {
+                        VIEW_CHANNEL: true,
+                        SEND_MESSAGES: false
+                    });
+
+                    msg.edit(m.mentions.members.first() + " não poderá mais falar.")
                 })
 
                 break;
