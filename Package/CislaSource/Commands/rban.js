@@ -14,9 +14,10 @@ exports.run = async (Discord, thisClient, message, args) => {
   const	name = item[0];
   const motivo = item[1];
   const prova = item[2];
+  const tipo = item[3];
 		
-	if(!name || !motivo || !prova) return message.channel.send(new Discord.RichEmbed()
-		.setDescription("Comando utilizado incorretamente. O uso correto é `!regban Nickname; Motivo; Prova.`")
+	if(!name || !motivo || !prova || !tipo) return message.channel.send(new Discord.RichEmbed()
+		.setDescription("Comando utilizado incorretamente. O uso correto é `!regban Nickname; Motivo; Prova; Tipo.`")
 		.setFooter('CislaSource ©', thisClient.user.displayAvatarURL)
         .setColor('#f83989')
 	)
@@ -27,6 +28,7 @@ exports.run = async (Discord, thisClient, message, args) => {
 		.addField('Usuario punido:', name)
 		.addField('Motivo:', motivo)
 		.addField('Provas:', prova)
+		.addField('Punição:', tipo)
 		.setFooter('CislaSource ©', thisClient.user.displayAvatarURL)
         .setColor('#f83989')
 	).then(Sucess => message.channel.send(new Discord.RichEmbed().setFooter('Punição registrada com sucesso.').setColor('#f83989')));

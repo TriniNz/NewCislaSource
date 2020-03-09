@@ -25,7 +25,7 @@
         {
         "name":"rban",
         "desc":"Registra a punição em um determinado canal.",
-        "uso":"regban Username; Motivo; Provas.",
+        "uso":"regban Username; Motivo; Provas; Tipo de punição.",
         "manutenção":false,
         "aliases":[
             "rban",
